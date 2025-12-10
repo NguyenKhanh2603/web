@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>URA Research Group | Member</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="member.css" />
+    <link rel="stylesheet" href="/Navbar/navbar.css" />
+  </head>
+  <body data-nav-current="people">
+    <div id="navbar-root"></div>
+
+    <!-- =========================
+         MAIN LAYOUT
+         ========================= -->
+    <main class="member-layout">
+      <!-- ========== SIDEBAR ========== -->
+      <!-- TODO: Mỗi member CHỈ CẦN SỬA block <aside> này: avatar, name, role, menu nếu muốn đổi tên -->
+      <aside class="member-sidebar fade-in">
+        <div class="member-avatar" aria-hidden="true">
+          <!-- TODO: Đổi ảnh profile cho từng người -->
+          <img src="/assets/PHD/Quang.jpg" alt="Profile photo of member" />
+        </div>
+
+        <!-- TODO: Đổi tên và chức danh -->
+        <div id="page-title" class="member-name">Dung Cam Quang</div>
+        <div class="member-role">PhD Student</div>
+
+        <!-- Side menu: About / Publications / Team
+             LƯU Ý: href="#id" phải trùng với id của <section> ở bên content -->
+        <ul class="side-nav" aria-label="Profile sections">
+          <li>
+            <a href="#about" class="is-active">About</a>
+          </li>
+          <li>
+            <a href="#publications">Publications</a>
+          </li>
+          <li>
+            <a href="#team">Team</a>
+          </li>
+          <!--
+          TODO: Nếu muốn thêm section mới, ví dụ "Teaching":
+          1) Thêm <li><a href="#teaching">Teaching</a></li> ở đây
+          2) Thêm <section id="teaching" ...> ở phần content bên dưới
+          -->
+        </ul>
+      </aside>
+
+      <!-- ========== MAIN CONTENT ========== -->
+      <div class="member-content fade-in">
+        <!-- ========== ABOUT SECTION ========== -->
+        <!-- TODO: ĐÂY LÀ PHẦN GIỚI THIỆU, mỗi người tự sửa nội dung bên trong .section-body -->
+        <section id="about" class="section section--about">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-body">
+            <!-- TODO: Đoạn giới thiệu ngắn -->
+            <p>
+              Hi! I am <strong>Dung Cam Quang</strong>, a PhD student at the URA
+              Research Group, Ho Chi Minh City University of Technology (HCMUT).
+            </p>
+
+            <!-- TODO: Research interests -->
+            <p>
+              My research interests lie in the intersection of
+              <strong>Machine Learning</strong>,
+              <strong>Large Language Models</strong>, and
+              <strong>Graph Neural Networks</strong>.
+            </p>
+
+            <!-- TODO: Email (Nhớ sửa cả href lẫn text) -->
+            <p>
+              Email:
+              <a href="mailto:quang.dungcse@hcmut.edu.vn"
+                >quang.dungcse@hcmut.edu.vn</a
+              >
+            </p>
+
+            <!-- TODO: Có thể sửa / xóa Note nếu không cần -->
+            <p><strong>Note.</strong> Feel free to contact me.</p>
+          </div>
+        </section>
+
+        <!-- ========== PUBLICATIONS SECTION ========== -->
+        <!-- TODO: Mỗi người sửa link Google Scholar + danh sách bài báo trong <ol> -->
+        <section id="publications" class="section section--pubs">
+          <h2 class="section-title">Publications</h2>
+          <div class="section-body">
+            <!-- TODO: Sửa link Google Scholar của từng người -->
+            <p>
+              For the full publication list, please refer to my
+              <a
+                href="https://scholar.google.com/citations?user=fxw7-lkAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener"
+                >Google Scholar page</a
+              >.
+            </p>
+
+            <p>Conference papers:</p>
+
+            <!-- TODO: Danh sách bài báo.
+                 Cách thêm bài mới:
+                 1) Copy một <li class="pub-item">...</li>
+                 2) Dán ngay dưới và sửa lại thông tin -->
+            <ol class="pub-list">
+              <li class="pub-item">
+                N.-T. Phong, N.-H.-K. Yen, N.-H. An,
+                <span class="pub-me">D.-C. Quang</span>, “Leveraging Deep Neural
+                Networks for Regional Weather Forecasting in Vietnam,” in
+                <span class="pub-venue"
+                  >Computational Intelligence in Engineering Science (ICClES
+                  2025)</span
+                >, 2025, pp. 209–223.
+              </li>
+
+              <li class="pub-item">
+                L.-T. Tien, N.-H. An,
+                <span class="pub-me">D.-C. Quang</span>, “VNExpirationDate: A
+                Novel Expiration Date Dataset and a Robust Framework for
+                Expiration Date Recognition on Complex Packaging in Vietnam,” in
+                <span class="pub-venue"
+                  >2024 RIVF International Conference on Computing and
+                  Communication Technologies (RIVF)</span
+                >, 2024, pp. 388–392.
+              </li>
+
+              <li class="pub-item">
+                <span class="pub-me">D.-C. Quang</span>, N.-H. An, V.-V. Le,
+                “In-Depth with Spatial-Temporal Graph Neural Networks for
+                Traffic Forecasting: An Overview with Attention,” in
+                <span class="pub-venue"
+                  >Conference on Information Technology and its Applications
+                  (CITA 2024)</span
+                >, 2024, pp. 295–306.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- ========== TEAM SECTION ========== -->
+        <!-- TODO: Phần liệt kê thành viên / collaborators liên quan tới người này -->
+        <section id="team" class="section section--team">
+          <h2 class="section-title">Team</h2>
+          <div class="section-body">
+            <!-- Có thể chia thành nhiều group: PhD Students, Research Fellows, Undergrads,... -->
+            <div class="team-group">
+              <div class="team-group-title">PhD Students</div>
+              <ul class="team-list">
+                <!-- TODO: Thêm / bớt tên ở đây -->
+                <li>Vo Quang Vinh</li>
+                <li>Cao Nguyen Thien Hoang</li>
+                <li>Truong Van Khang</li>
+              </ul>
+            </div>
+
+            <!--
+            TODO: Ví dụ thêm group khác:
+            <div class="team-group">
+              <div class="team-group-title">Undergraduate Students</div>
+              <ul class="team-list">
+                <li>Student A</li>
+                <li>Student B</li>
+              </ul>
+            </div>
+            -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="ura-footer">
+          <div class="footer-container content">
+            <div class="footer-left">
+              <!-- <nav class="breadcrumbs">
+                <span>Home</span> 
+                <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z"/></svg>
+                <span>Home</span>
+              </nav> -->
+              <nav id="breadcrumbs-container" aria-label="breadcrumb" class="breadcrumbs"></nav>
+              <div class="divider"></div>
+              <p class="copyright">© URA @ HCMUT. All rights reserved.</p>
+            </div>
+
+            <div class="footer-right">
+              <div class="info-group">
+                <div class="location-title">Location</div>
+                <div class="divider"></div>
+                <a href="https://maps.app.goo.gl/qeBeoQUoniyqVpFm6" class="address" target="_blank">
+                  Ly Thuong Kiet Campus: 268 Ly Thuong Kiet, Ward 14,<br />
+                  District 10, Ho Chi Minh City
+                </a>
+              </div>
+              <div class="footer-logo">
+                <img
+                  src="/assets/URA_logo_1024.png"
+                  alt="URA Logo"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+
+    <!-- ========== JS: auto highlight menu theo section (KHÔNG CẦN SỬA) ========== -->
+    <script>
+      const sections = document.querySelectorAll(".section");
+      const navLinks = document.querySelectorAll(".side-nav a");
+
+      function setActive(id) {
+        navLinks.forEach((link) => {
+          const target = link.getAttribute("href").substring(1);
+          link.classList.toggle("is-active", target === id);
+        });
+      }
+
+      function onScroll() {
+        let closestId = null;
+        let closestDistance = Infinity;
+        const offset = 200; // khoảng cách từ top để tính section "gần nhất"
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          const distance = Math.abs(rect.top - offset);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestId = section.id;
+          }
+        });
+
+        if (closestId) setActive(closestId);
+      }
+
+      window.addEventListener("scroll", onScroll);
+      window.addEventListener("load", onScroll);
+    </script>
+    <script src="/Navbar/navbar.js" defer></script>
+    <script src="/breadcrumbs.js" defer></script>
+  </body>
+</html>
