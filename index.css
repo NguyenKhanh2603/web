@@ -294,6 +294,69 @@ h6,
 }
 
 /* Updated blog carousel to show 2 blogs at a time from 4 total blogs */
+
+/* -------------------- MOBILE FIXES -------------------- */
+@media (max-width: 900px) {
+  .lead-content {
+    width: 100%;
+    text-align: left;
+  }
+  .lead-vn {
+    text-align: left;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .footer-left,
+  .footer-right {
+    max-width: 100%;
+    flex: 1;
+  }
+  .info-group {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .lead-txt {
+    text-align: left;
+    line-height: 1.9;
+    font-size: 1.7rem;
+  }
+
+  .ura-footer {
+    padding: 28px 20px;
+  }
+  .footer-logo img {
+    width: 80px;
+  }
+
+  .breadcrumbs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  #breadcrumbs-container a,
+  #breadcrumbs-container span.current {
+    font-size: 1.3rem;
+  }
+
+  .content {
+    padding: 0 12px;
+    width: 100%;
+  }
+
+  .title-sub {
+    letter-spacing: 1px;
+  }
+}
+
+.ura-footer .address {
+  word-break: break-word;
+}
 .blogs-track {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -430,108 +493,8 @@ h6,
   font-style: italic;
 }
 
-/* LEADER */
-.lead-container {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-}
 
-/* IMAGE CARD */
-.lead-photo {
-  position: relative;
-  width: 340px; /* ✅ FIXED SIZE */
-  height: 440px; /* ✅ FIXED HEIGHT */
-  overflow: hidden;
-  border-radius: var(--r-lg);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-md);
-  flex-shrink: 0;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-/* IMAGE */
-.lead-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.45s ease;
-}
-
-/*  HOVER EFFECT */
-.lead-photo:hover {
-  cursor: pointer;
-  border-color: var(--accent);
-  box-shadow: var(--shadow-xl);
-}
-
-/* TEXT PANEL */
-.lead-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* RESPONSIVE (Mobile) */
-@media (max-width: 900px) {
-  .lead-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .lead-photo {
-    width: 280px;
-    height: 360px;
-  }
-}
-
-/* Added lead-content wrapper */
-.lead-content {
-  display: flex;
-  flex-direction: column;
-  width: 55%;
-}
-
-.lead-rank {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 2.9rem;
-  text-transform: capitalize;
-}
-
-.lead-name a {
-  font-size: 6rem;
-  font-weight: 800;
-  margin: 4px 0;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.lead-name a:hover {
-  cursor: pointer;
-}
-
-.lead-vn {
-  color: var(--muted);
-  font-size: 2.9rem;
-  font-style: italic;
-  text-align: right;
-  margin-bottom: 20px;
-}
-
-.lead-txt {
-  font-size: 1.8rem;
-  color: #4b5563;
-  margin: 4px 0;
-  line-height: 1.8;
-  text-align: justify;
-  margin: 8px 0;
-}
-
-.btn-sm {
+/* .btn-sm {
   padding: 10px 24px;
   border-radius: 99px;
   border: 2px solid var(--accent);
@@ -547,19 +510,18 @@ h6,
 
 .btn-sm:hover {
   opacity: 0.6;
-}
+} */
 
 /* ------------------- FOOTER ------------------- */
+
 .ura-footer {
   background-color: var(--bg);
-  padding: 40px 60px;
+  padding: 40px 0;
   color: #777;
   font-size: 1.4rem;
   width: 100%;
-
   position: relative;
   z-index: 1;
-
   border-top: 1px solid #fff;
 }
 
@@ -567,22 +529,23 @@ h6,
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* --- LEFT COLUMN --- */
 .footer-left {
   flex: 1;
-  max-width: 45%;
+  max-width: 50%;
 }
 
 .breadcrumbs {
   margin-bottom: 8px;
-
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #breadcrumbs-container a {
@@ -597,7 +560,7 @@ h6,
 }
 
 #breadcrumbs-container span.current {
-  color: #7777;
+  color: #777;
   font-weight: 600;
 }
 
@@ -609,32 +572,33 @@ h6,
   vertical-align: middle;
 }
 
-.ura-footer .arrow-icon path {
-  fill: #777;
-}
-
 /* --- RIGHT COLUMN --- */
 .footer-right {
-  flex: 1;
-  max-width: 55%;
+  flex: 1.2;
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .info-group {
-  flex-grow: 1;
-  text-align: right;
+  text-align: right; /* Aligns text to the right (Like Blog) */
 }
 
 .location-title {
   margin-bottom: 8px;
+  color: #111827;
+  font-weight: 600;
+  display: inline-block;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
 }
 
 .ura-footer .address {
-  line-height: 1.5;
+  line-height: 1.6;
   color: #777;
   text-decoration: none;
+  display: block;
 }
 
 .ura-footer .address:hover {
@@ -642,44 +606,67 @@ h6,
   cursor: pointer;
 }
 
-/* --- ĐƯỜNG KẺ NGANG --- */
-.divider {
-  height: 1px;
-  background-color: #ccc; /* Màu đường kẻ */
-  width: 100%;
-  margin-bottom: 12px; /* Khoảng cách từ đường kẻ xuống nội dung dưới */
-}
-
 /* --- LOGO --- */
 .footer-logo img {
-  width: 100px; /* Kích thước logo */
+  width: 90px;
   height: auto;
   object-fit: contain;
-  /* Nếu bạn muốn tạo viền lục giác giống ảnh mẫu, cần dùng ảnh PNG trong suốt */
+  margin-top: -5px;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* --- DIVIDER --- */
+.divider {
+  display: none;
+}
+
+/* =========================================
+   RESPONSIVE & MEDIA QUERIES 
+   (Restores Layout + Fixes Footer)
+   ========================================= */
+
 @media (max-width: 900px) {
-  .nav__links {
-    gap: 18px;
-    font-size: 13px;
+  .hero .content {
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
-  .blogs-track {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .lead-grid,
-  .contact {
-    grid-template-columns: 1fr;
-  }
-  .lead-photo {
-    height: 240px;
+  .badge {
+    font-size: 2.6rem;
+    padding: 10px 28px;
+    letter-spacing: 2px;
   }
   .title-sub {
-    font-size: 32px;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+  }
+  .ura-footer {
+    padding: 30px 0;
+  }
+
+  /* --- BLOG CARD FIX (Image on Top) --- */
+  a.news-card {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 0;
+    overflow: hidden; 
+  }
+  .news-thumb {
+    border-radius: 0;
+    width: 100%;
+  }
+  .news-thumb img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+    display: block;
+  }
+  .news-content {
+    padding: 24px;
   }
 }
 
 @media (max-width: 600px) {
+  /* --- RESTORED MOBILE LAYOUT (Fixes "View all Members") --- */
   .hero {
     padding: 60px 20px 48px;
   }
@@ -697,21 +684,19 @@ h6,
   .sec {
     padding: 40px 16px;
   }
+  
+  /* This part brings back the button layout! */
   .head {
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-start;
   }
   .btn,
   .btn--primary {
     width: 100%;
+    margin-top: 10px; /* Adds space between title and button */
   }
-  .contact {
-    gap: 32px;
-  }
-  .form {
-    padding: 24px;
-  }
-  /* Mobile carousel adjustments */
+
+  /* Carousel Adjustments */
   .blogs-container {
     flex-direction: column;
     gap: 20px;
@@ -724,5 +709,38 @@ h6,
     width: 40px;
     height: 40px;
     font-size: 20px;
+  }
+
+  /* --- FOOTER FIX (Keeps side-by-side) --- */
+  .footer-container {
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 12px; 
+    padding: 0 16px;
+  }
+
+  .ura-footer {
+    font-size: 1.2rem;
+  }
+  
+  .footer-logo img {
+    width: 60px; 
+  }
+
+  .location-title {
+    margin-bottom: 4px;
+  }
+  
+  /* Blog Card Font Adjustments */
+  a.news-card h3 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+  .news-body p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+  .news-content {
+    padding: 16px;
   }
 }

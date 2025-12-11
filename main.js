@@ -227,9 +227,7 @@ document.addEventListener("keydown", (e) => {
     closeBioModal();
 });
 
-/* ==========================================================================
-   PHẦN 4: UI ANIMATIONS (Code bạn vừa gửi)
-   ========================================================================== */
+
 function initAnimations() {
   // 1. Fade-in Animation Observer (đổi tên thành fadeObserver)
   const fadeOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };

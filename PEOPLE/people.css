@@ -34,12 +34,10 @@ html {
 
 body {
   font-family: var(--font-body);
-
   color: var(--ink);
   background: #fff;
   line-height: 1.6;
   overflow-x: hidden;
-
   font-size: 1.8rem;
 }
 
@@ -49,14 +47,7 @@ body {
   margin: auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.nav__brand,
-.badge {
+h1, h2, h3, h4, h5, h6, .nav__brand, .badge {
   font-family: var(--font-display);
 }
 
@@ -92,7 +83,6 @@ a {
 }
 
 /* -------------------- HERO -------------------- */
-
 .hero {
   background: linear-gradient(135deg, #f3f5f7 0%, #e9edf2 100%);
   text-align: center;
@@ -126,6 +116,7 @@ a {
   position: relative;
   z-index: 1;
   display: flex;
+  display: flex;
   flex-direction: column;
   gap: 26px;
 }
@@ -142,8 +133,6 @@ a {
   background: #ffffff;
   color: var(--ink);
   border-radius: 8px;
-
-  /* trạng thái bình thường: hơi nổi nhẹ */
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
   transform: translateY(0) scale(1);
   transition: transform 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94),
@@ -151,14 +140,10 @@ a {
     background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Hover: nhô lên + phóng to + nền xanh */
 .badge:hover {
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
-
-  /* transform: translateY(-12px) scale(1.04);
-  box-shadow: 0 26px 55px rgba(15, 23, 42, 0.28); */
   cursor: pointer;
 }
 
@@ -170,7 +155,6 @@ a {
   line-height: 1.2;
 }
 
-/* Added hero subtitle */
 .hero-subtitle {
   font-size: 1.6rem;
   color: var(--muted);
@@ -179,7 +163,6 @@ a {
 }
 
 /* -------------------- SECTION -------------------- */
-
 .sec {
   padding: 60px 24px;
 }
@@ -225,7 +208,6 @@ a {
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Enhanced team card hover with elevation */
 .team-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
@@ -253,7 +235,6 @@ a {
   transform: scale(1.05);
 }
 
-/* Overlay on hover */
 .card-overlay {
   position: absolute;
   top: 0;
@@ -341,17 +322,15 @@ a {
   line-height: 1.6;
 }
 
-/* -------------------- FOOTER -------------------- */
+/* -------------------- FOOTER (FIXED) -------------------- */
 .ura-footer {
   background-color: var(--bg);
-  padding: 40px 60px;
+  padding: 40px 0;
   color: #777;
   font-size: 1.4rem;
   width: 100%;
-
   position: relative;
   z-index: 1;
-
   border-top: 1px solid #fff;
 }
 
@@ -359,9 +338,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* --- LEFT COLUMN --- */
@@ -372,9 +352,9 @@ a {
 
 .breadcrumbs {
   margin-bottom: 8px;
-
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #breadcrumbs-container a {
@@ -389,7 +369,7 @@ a {
 }
 
 #breadcrumbs-container span.current {
-  color: #7777;
+  color: #777;
   font-weight: 600;
 }
 
@@ -407,26 +387,31 @@ a {
 
 /* --- RIGHT COLUMN --- */
 .footer-right {
-  flex: 1;
-  max-width: 55%;
+  flex: 1.2;
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
+  justify-content: flex-end; /* Pushes content to the right */
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .info-group {
-  flex-grow: 1;
-  text-align: right;
+  text-align: right; /* CRITICAL: Aligns text to the right */
 }
 
 .location-title {
   margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  display: inline-block;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
 }
 
 .ura-footer .address {
-  line-height: 1.5;
+  line-height: 1.6;
   color: #777;
   text-decoration: none;
+  display: block;
 }
 
 .ura-footer .address:hover {
@@ -434,24 +419,37 @@ a {
   cursor: pointer;
 }
 
-/* --- ĐƯỜNG KẺ NGANG --- */
-.divider {
-  height: 1px;
-  background-color: #ccc; /* Màu đường kẻ */
-  width: 100%;
-  margin-bottom: 12px; /* Khoảng cách từ đường kẻ xuống nội dung dưới */
-}
-
 /* --- LOGO --- */
 .footer-logo img {
-  width: 100px; /* Kích thước logo */
+  width: 90px;
   height: auto;
   object-fit: contain;
-  /* Nếu bạn muốn tạo viền lục giác giống ảnh mẫu, cần dùng ảnh PNG trong suốt */
+  margin-top: -5px;
+}
+
+/* --- DIVIDER --- */
+.divider {
+  display: none;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  /* --- FIXED: Added from Home.css to shrink the Badge --- */
+  .hero .content {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  .badge {
+    font-size: 2.6rem;
+    padding: 10px 28px;
+    letter-spacing: 2px;
+  }
+  .title-sub {
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+  }
+
+  /* --- Existing People Styles --- */
   .team-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
@@ -459,9 +457,26 @@ a {
     gap: 18px;
     font-size: 13px;
   }
+  
+  /* Footer Padding Adjustment */
+  .ura-footer {
+    padding: 30px 0;
+  }
 }
 
 @media (max-width: 600px) {
+  /* --- FIXED: Added from Home.css for Mobile Badge --- */
+  .title-sub {
+    font-size: 24px;
+  }
+  .badge {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 24px;
+    font-size: 2rem;
+  }
+
+  /* --- Existing People Styles --- */
   .hero-mini h1 {
     font-size: 28px;
   }
@@ -480,6 +495,26 @@ a {
   }
   .team-card-img {
     height: 200px;
+  }
+  
+  /* --- FOOTER MOBILE FIX (Side-by-Side) --- */
+  .footer-container {
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 12px; 
+    padding: 0 16px;
+  }
+
+  .ura-footer {
+    font-size: 1.2rem;
+  }
+  
+  .footer-logo img {
+    width: 60px; /* Smaller logo for mobile */
+  }
+
+  .location-title {
+    margin-bottom: 4px;
   }
 }
 
@@ -570,7 +605,7 @@ a {
   transition: transform 0.45s ease;
 }
 
-.founder__photo:hover {
+/* .founder__photo:hover {
   transform: translateY(-10px);
   border-color: var(--accent);
   box-shadow: var(--shadow-xl);
@@ -578,7 +613,7 @@ a {
 
 .founder__photo:hover img {
   transform: scale(1.06);
-}
+} */
 
 /* TEXT PANEL – same scale as home lead-content */
 .founder__text {
@@ -659,7 +694,6 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   padding: 10px;
 }
 

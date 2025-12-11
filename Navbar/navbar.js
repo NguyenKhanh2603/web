@@ -48,7 +48,7 @@ function initNavbar(nav) {
   const navLinks = nav.querySelectorAll(".nav__links a");
   const navToggle = nav.querySelector(".nav__toggle");
   const navLinksContainer = nav.querySelector(".nav__links");
-  const sections = document.querySelectorAll("section[id]");
+  // const sections = document.querySelectorAll("section[id]"); // Không cần dùng nữa
   const navCurrent = document.body.dataset.navCurrent || "home";
 
   const pageOverrides = {
@@ -66,10 +66,10 @@ function initNavbar(nav) {
 
   if (navCurrent === "home") {
     const anchorMap = {
-      about: "#about",
-      blogs: "#blogs",
-      people: "#people",
-      contact: "#contact",
+      // about: "#about", // Đã bỏ theo yêu cầu
+      // blogs: "#blogs",
+      // people: "#people",
+      // contact: "#contact",
     };
 
     Object.entries(anchorMap).forEach(([key, value]) => {
@@ -90,32 +90,19 @@ function initNavbar(nav) {
     });
   };
 
+  // --- PHẦN ĐÃ SỬA ---
   const handleScroll = () => {
-    const offset = (nav?.offsetHeight || 80) + 24;
+    // 1. Logic Active Link: Luôn set theo navCurrent (Home), không đổi khi cuộn
+    setActiveLink(navCurrent);
 
-    if (navCurrent !== "home" || sections.length === 0) {
-      setActiveLink(navCurrent);
-    } else {
-      const currentScroll = window.pageYOffset + offset;
-      let currentId = "home";
-
-      sections.forEach((section) => {
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-        if (currentScroll >= top && currentScroll < bottom) {
-          currentId = section.id;
-        }
-      });
-
-      setActiveLink(currentId);
-    }
-
+    // 2. Logic Shadow: Giữ nguyên hiệu ứng bóng đổ khi cuộn
     if (window.pageYOffset > 10) {
       nav.style.boxShadow = "0 4px 12px rgba(15, 23, 42, 0.12)";
     } else {
       nav.style.boxShadow = "0 2px 8px rgba(15, 23, 42, 0.06)";
     }
   };
+  // -------------------
 
   if (navToggle && navLinksContainer) {
     navToggle.addEventListener("click", () => {

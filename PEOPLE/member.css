@@ -51,14 +51,7 @@ body {
   font-size: 1.8rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.nav__brand,
-.badge {
+h1, h2, h3, h4, h5, h6, .nav__brand, .badge {
   font-family: var(--font-display);
 }
 
@@ -100,7 +93,6 @@ a {
 }
 
 /* Sidebar */
-
 .member-sidebar {
   background: #f2f4fb;
   border-radius: 20px;
@@ -146,7 +138,6 @@ a {
 }
 
 /* Sidebar nav (ABOUT / PUBLICATIONS / TEAM) */
-
 .side-nav {
   margin-top: 28px;
   list-style: none;
@@ -181,7 +172,6 @@ a {
 }
 
 /* Content area */
-
 .member-content {
   background: var(--card);
   border-radius: 20px;
@@ -190,7 +180,6 @@ a {
 }
 
 /* Sections */
-
 .section {
   margin-bottom: 40px;
 }
@@ -298,20 +287,16 @@ a {
 }
 
 /* =========================
-   FOOTER – SAME AS home.css
-   ========================= */
+   FOOTER  */
 
-/* ------------------- FOOTER ------------------- */
 .ura-footer {
   background-color: var(--bg);
-  padding: 40px 60px;
+  padding: 40px 0;
   color: #777;
   font-size: 1.4rem;
   width: 100%;
-
   position: relative;
   z-index: 1;
-
   border-top: 1px solid #fff;
 }
 
@@ -319,22 +304,23 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* --- LEFT COLUMN --- */
 .footer-left {
   flex: 1;
-  max-width: 45%;
+  max-width: 50%;
 }
 
 .breadcrumbs {
   margin-bottom: 8px;
-
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #breadcrumbs-container a {
@@ -349,7 +335,7 @@ a {
 }
 
 #breadcrumbs-container span.current {
-  color: #7777;
+  color: #777;
   font-weight: 600;
 }
 
@@ -367,26 +353,31 @@ a {
 
 /* --- RIGHT COLUMN --- */
 .footer-right {
-  flex: 1;
-  max-width: 55%;
+  flex: 1.2;
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
+  justify-content: flex-end; /* Pushes content to the right */
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .info-group {
-  flex-grow: 1;
-  text-align: right;
+  text-align: right; /* CRITICAL: Aligns text to the right */
 }
 
 .location-title {
   margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--ink);
+  display: inline-block;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
 }
 
 .ura-footer .address {
-  line-height: 1.5;
+  line-height: 1.6;
   color: #777;
   text-decoration: none;
+  display: block;
 }
 
 .ura-footer .address:hover {
@@ -394,20 +385,17 @@ a {
   cursor: pointer;
 }
 
-/* --- ĐƯỜNG KẺ NGANG --- */
-.divider {
-  height: 1px;
-  background-color: #ccc; /* Màu đường kẻ */
-  width: 100%;
-  margin-bottom: 12px; /* Khoảng cách từ đường kẻ xuống nội dung dưới */
-}
-
 /* --- LOGO --- */
 .footer-logo img {
-  width: 100px; /* Kích thước logo */
+  width: 90px;
   height: auto;
   object-fit: contain;
-  /* Nếu bạn muốn tạo viền lục giác giống ảnh mẫu, cần dùng ảnh PNG trong suốt */
+  margin-top: -5px;
+}
+
+/* --- DIVIDER --- */
+.divider {
+  display: none;
 }
 
 /* =========================
@@ -430,28 +418,50 @@ a {
   .member-content {
     padding: 20px 18px 24px;
   }
+  
+  /* Footer Padding Adjust */
+  .ura-footer {
+    padding: 30px 0;
+  }
 }
 
 @media (max-width: 600px) {
+  /* Member Profile Adjustments */
   .member-avatar {
     width: 140px;
     height: 140px;
   }
-
   .member-name {
     font-size: 1.8rem;
   }
-
   .section-title {
     font-size: 1.6rem;
     letter-spacing: 0.18em;
   }
-
   .pub-item {
     font-size: 1.3rem;
   }
-
   .member-layout {
     padding: 0 12px 32px;
+  }
+
+  /* --- FOOTER MOBILE FIX (Side-by-Side) --- */
+  .footer-container {
+    flex-direction: row; 
+    align-items: flex-start;
+    gap: 12px; 
+    padding: 0 16px;
+  }
+
+  .ura-footer {
+    font-size: 1.2rem;
+  }
+  
+  .footer-logo img {
+    width: 60px; /* Smaller logo for mobile */
+  }
+
+  .location-title {
+    margin-bottom: 4px;
   }
 }
