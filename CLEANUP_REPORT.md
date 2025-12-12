@@ -16,6 +16,7 @@
 - `bio-modal.js`: Cập nhật đường dẫn ảnh mẫu sang relative (`../assets/...`) cho modal hoạt động khi gọi từ trang People.
 - `.env.example`: Thêm file placeholder khẳng định dự án tĩnh chưa cần biến môi trường.
 - `README.md`: Viết lại đầy đủ overview, stack, cấu trúc, module, setup, deploy, troubleshooting.
+- `breadcrumbs.js`: Cho phép breadcrumb cuối cùng vẫn là link tới trang hiện tại (giúp Home/People trong footer vẫn click được), giữ logic tính đường dẫn relative theo vị trí script. Đặt `scriptBase` ở scope module (không dùng `document.currentScript` trong callback) để tránh resolve sai khi trang đã load, chỉ loại segment trùng folder khi không kèm `.html`, bỏ crumb trung gian khi file trùng tên folder (PEOPLE/people.html), và chỉ thêm icon ngăn cách sau khi chắc chắn không skip để tránh “mũi tên” dư.
 
 ## 3) Những thứ đã xóa
 - Không xóa file/mã nguồn nào.
