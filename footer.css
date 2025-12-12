@@ -1,0 +1,136 @@
+/* Shared footer styles across pages */
+
+.ura-footer {
+  background-color: var(--bg);
+  padding: 40px 0;
+  color: #777;
+  font-size: 1.4rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid #fff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Left column */
+.footer-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.breadcrumbs {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#breadcrumbs-container a {
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+#breadcrumbs-container a:hover {
+  color: #686868;
+}
+
+#breadcrumbs-container span.current {
+  color: #777;
+  font-weight: 600;
+}
+
+.ura-footer .crumb-separator {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  opacity: 0.8;
+  vertical-align: middle;
+}
+
+/* Right column */
+.footer-right {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.info-group {
+  text-align: right;
+}
+
+.location-title {
+  color: #777;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid;
+}
+
+.ura-footer .address {
+  line-height: 1.6;
+  color: #777;
+  text-decoration: none;
+  display: block;
+  margin-top: 8px;
+  word-break: break-word;
+}
+
+.ura-footer .address:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Logo */
+.footer-logo img {
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  margin-top: -5px;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  border: 1px solid;
+  margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+  .ura-footer {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .ura-footer {
+    font-size: 1.2rem;
+  }
+
+  .footer-logo img {
+    width: 60px;
+  }
+
+  .location-title {
+    margin-bottom: 4px;
+  }
+}

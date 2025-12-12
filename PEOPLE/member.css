@@ -1,5 +1,7 @@
+@import url("/footer.css");
+
 /* member.css – Combined About / Publications / Team page
-   Unified with home.css: navbar, footer, typography
+  Unified with home.css: navbar, footer, typography
 */
 
 :root {
@@ -51,7 +53,14 @@ body {
   font-size: 1.8rem;
 }
 
-h1, h2, h3, h4, h5, h6, .nav__brand, .badge {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav__brand,
+.badge {
   font-family: var(--font-display);
 }
 
@@ -286,117 +295,6 @@ a {
   margin-top: 4px;
 }
 
-/* =========================
-   FOOTER  */
-
-.ura-footer {
-  background-color: var(--bg);
-  padding: 40px 0;
-  color: #777;
-  font-size: 1.4rem;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  border-top: 1px solid #fff;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* --- LEFT COLUMN --- */
-.footer-left {
-  flex: 1;
-  max-width: 50%;
-}
-
-.breadcrumbs {
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-#breadcrumbs-container a {
-  text-decoration: none;
-  color: #777;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-#breadcrumbs-container a:hover {
-  color: #686868;
-}
-
-#breadcrumbs-container span.current {
-  color: #777;
-  font-weight: 600;
-}
-
-.ura-footer .crumb-separator {
-  width: 10px;
-  height: 10px;
-  margin: 0 10px;
-  opacity: 0.8;
-  vertical-align: middle;
-}
-
-.ura-footer .arrow-icon path {
-  fill: #777;
-}
-
-/* --- RIGHT COLUMN --- */
-.footer-right {
-  flex: 1.2;
-  display: flex;
-  justify-content: flex-end; /* Pushes content to the right */
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.info-group {
-  text-align: right; /* CRITICAL: Aligns text to the right */
-}
-
-.location-title {
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: var(--ink);
-  display: inline-block;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 4px;
-}
-
-.ura-footer .address {
-  line-height: 1.6;
-  color: #777;
-  text-decoration: none;
-  display: block;
-}
-
-.ura-footer .address:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* --- LOGO --- */
-.footer-logo img {
-  width: 90px;
-  height: auto;
-  object-fit: contain;
-  margin-top: -5px;
-}
-
-/* --- DIVIDER --- */
-.divider {
-  display: none;
-}
 
 /* =========================
    Responsive
@@ -418,11 +316,6 @@ a {
   .member-content {
     padding: 20px 18px 24px;
   }
-  
-  /* Footer Padding Adjust */
-  .ura-footer {
-    padding: 30px 0;
-  }
 }
 
 @media (max-width: 600px) {
@@ -443,25 +336,5 @@ a {
   }
   .member-layout {
     padding: 0 12px 32px;
-  }
-
-  /* --- FOOTER MOBILE FIX (Side-by-Side) --- */
-  .footer-container {
-    flex-direction: row; 
-    align-items: flex-start;
-    gap: 12px; 
-    padding: 0 16px;
-  }
-
-  .ura-footer {
-    font-size: 1.2rem;
-  }
-  
-  .footer-logo img {
-    width: 60px; /* Smaller logo for mobile */
-  }
-
-  .location-title {
-    margin-bottom: 4px;
   }
 }
