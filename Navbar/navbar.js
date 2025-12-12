@@ -1,3 +1,6 @@
+// Resolve paths relative to the navbar script so assets work from any page depth
+const navScriptBase = new URL("./", document.currentScript?.src || window.location.href);
+
 document.addEventListener("DOMContentLoaded", async () => {
   const nav = await injectNavbar();
   if (nav) {
@@ -5,6 +8,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+/**
+ * Fetch and inject navbar markup, then normalize asset links so they work from nested pages.
+ */
 async function injectNavbar() {
   const existingSlot = document.getElementById("navbar-root");
   const slot =
@@ -17,7 +23,8 @@ async function injectNavbar() {
     })();
 
   try {
-    const response = await fetch("/Navbar/navbar.html", { cache: "no-cache" });
+    const navbarUrl = new URL("./navbar.html", navScriptBase);
+    const response = await fetch(navbarUrl.href, { cache: "no-cache" });
     if (!response.ok) {
       throw new Error(`Navbar fetch failed with status ${response.status}`);
     }
@@ -31,16 +38,48 @@ async function injectNavbar() {
       throw new Error("Navbar markup missing in Navbar/navbar.html");
     }
 
+    normalizeNavbarAssets(nav);
     if (slot.parentNode) {
       slot.replaceWith(nav);
     } else {
       document.body.prepend(nav);
     }
-
     return nav;
   } catch (error) {
     console.error("Failed to load navbar:", error);
     return null;
+  }
+}
+
+// Ensure all navbar href/src values are rooted at the navbar script location
+function normalizeNavbarAssets(nav) {
+  const brandLink = nav.querySelector(".nav__brand");
+  if (brandLink) {
+    brandLink.href = new URL("../index.html", navScriptBase).href;
+    const brandLogo = brandLink.querySelector("img");
+    if (brandLogo) {
+      brandLogo.src = new URL("../assets/URA_logo_1024.png", navScriptBase).href;
+    }
+  }
+
+  const homeLink = nav.querySelector('.nav__links a[data-nav="home"]');
+  if (homeLink) {
+    homeLink.href = new URL("../index.html", navScriptBase).href;
+  }
+
+  const peopleLink = nav.querySelector('.nav__links a[data-nav="people"]');
+  if (peopleLink) {
+    peopleLink.href = new URL("../PEOPLE/people.html", navScriptBase).href;
+  }
+
+  const menuIcon = nav.querySelector(".nav__toggle-icon--menu");
+  if (menuIcon) {
+    menuIcon.src = new URL("./bars-solid-full.svg", navScriptBase).href;
+  }
+
+  const closeIcon = nav.querySelector(".nav__toggle-icon--close");
+  if (closeIcon) {
+    closeIcon.src = new URL("./xmark-solid-full.svg", navScriptBase).href;
   }
 }
 
@@ -128,6 +167,9 @@ function initNavbar(nav) {
       });
     });
   }
+
+  // Ensure the current page link is highlighted on first render (even if load has fired)
+  setActiveLink(navCurrent);
 
   window.addEventListener("scroll", handleScroll);
   window.addEventListener("load", handleScroll);

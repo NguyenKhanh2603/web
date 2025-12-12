@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="Navbar/navbar.css" />
 
     <!-- FONT - STACK SANS TEXT -->
@@ -25,23 +25,28 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicon_io/apple-touch-icon.png"
+      href="assets/favicon_io/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon_io/favicon-32x32.png"
+      href="assets/favicon_io/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon_io/favicon-16x16.png"
+      href="assets/favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
   </head>
   <body data-nav-current="home">
+    <!--
+      Landing page for URA Research Group.
+      Uses shared Navbar/navbar.js for navigation injection and breadcrumbs.js for footer crumbs.
+      All static assets live under ./assets and shared styling is split across index.css, footer.css, and Navbar/navbar.css.
+    -->
     <div id="navbar-root"></div>
 
     <!-- HERO -->
@@ -121,14 +126,14 @@
             </a>
           </div>
           <div class="footer-logo">
-            <img src="/assets/URA_logo_1024.png" alt="URA Logo" />
+            <img src="assets/URA_logo_1024.png" alt="URA Logo" />
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="/Navbar/navbar.js" defer></script>
+    <script src="Navbar/navbar.js" defer></script>
     <script src="animations.js"></script>
-    <script src="/breadcrumbs.js"></script>
+    <script src="breadcrumbs.js"></script>
   </body>
 </html>

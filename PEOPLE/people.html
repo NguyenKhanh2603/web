@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>URA – People</title>
     <link rel="stylesheet" href="people.css" />
-    <link rel="stylesheet" href="/Navbar/navbar.css" />
+    <link rel="stylesheet" href="../Navbar/navbar.css" />
 
     <!-- FONT - STACK SANS TEXT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,23 +20,28 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicon_io/apple-touch-icon.png"
+      href="../assets/favicon_io/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon_io/favicon-32x32.png"
+      href="../assets/favicon_io/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon_io/favicon-16x16.png"
+      href="../assets/favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest" />
   </head>
   <body data-nav-current="people">
+    <!--
+      Directory page for URA team members.
+      Shares navbar/breadcrumb scripts from the project root and pulls portraits from ../assets.
+      Animations and the bio modal rely on animations.js and bio-modal.js; keep data-nav attributes aligned with Navbar/navbar.js.
+    -->
     <div id="navbar-root"></div>
 
     <section class="hero">
@@ -55,7 +60,7 @@
       <div class="bar"></div>
       <div class="founder">
         <div class="founder__photo">
-          <img src="/assets/Tho.jpg" alt="Assoc. Prof. Quan Thanh Tho" />
+          <img src="../assets/Tho.jpg" alt="Assoc. Prof. Quan Thanh Tho" />
         </div>
         <div class="founder__text">
           <div class="founder__rank">Assoc. Prof.</div>
@@ -102,7 +107,7 @@
           <div class="grid">
             <div class="card">
               <div class="avatar">
-                <img src="/assets/FACULTY/TranTruongTuanPhat.png" alt="" />
+                <img src="../assets/FACULTY/TranTruongTuanPhat.png" alt="" />
               </div>
               <div class="name">Tran Truong Tuan Phat</div>
               <div class="vn">(Trần Trương Tuấn Phát)</div>
@@ -110,7 +115,7 @@
 
             <div class="card">
               <div class="avatar">
-                <img src="/assets/FACULTY/MaiDucTrung.jpg" alt="" />
+                <img src="../assets/FACULTY/MaiDucTrung.jpg" alt="" />
               </div>
               <div class="name">Mai Duc Trung</div>
               <div class="vn">(Mai Đức Trung)</div>
@@ -118,7 +123,7 @@
 
             <div class="card">
               <div class="avatar">
-                <img src="/assets/FACULTY/NguyenAnhTam.jpg" alt="" />
+                <img src="../assets/FACULTY/NguyenAnhTam.jpg" alt="" />
               </div>
               <div class="name">Nguyen Anh Tam</div>
               <div class="vn">(Nguyễn Anh Tâm)</div>
@@ -126,7 +131,7 @@
 
             <div class="card">
               <div class="avatar">
-                <img src="/assets/FACULTY/ThiKhacQuan.jpg" alt="" />
+                <img src="../assets/FACULTY/ThiKhacQuan.jpg" alt="" />
               </div>
               <div class="name">Thi Khac Quan</div>
               <div class="vn">(Thi Khắc Quân)</div>
@@ -134,7 +139,7 @@
 
             <div class="card">
               <div class="avatar">
-                <img src="/assets/FACULTY/LuongMinhHien.jpg" alt="" />
+                <img src="../assets/FACULTY/LuongMinhHien.jpg" alt="" />
               </div>
               <div class="name">Luong Minh Hien</div>
               <div class="vn">(Lương Minh Hiền)</div>
@@ -150,7 +155,7 @@
       <div class="grid">
         <div class="card">
           <div class="avatar">
-            <img src="/assets/INTERNATIONAL PHD/NguyenQuangDuc.jpg" alt="" />
+            <img src="../assets/INTERNATIONAL PHD/NguyenQuangDuc.jpg" alt="" />
           </div>
           <div class="name">Nguyen Quang Duc</div>
           <div class="vn">(Nguyễn Quang Đức)</div>
@@ -158,7 +163,7 @@
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/INTERNATIONAL PHD/VoHoangNhatKhang.jpg" alt="" />
+            <img src="../assets/INTERNATIONAL PHD/VoHoangNhatKhang.jpg" alt="" />
           </div>
           <div class="name">Vo Hoang Nhat Khang</div>
           <div class="vn">(Võ Hoàng Nhật Khang)</div>
@@ -166,7 +171,7 @@
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/INTERNATIONAL PHD/NguyenThiTy.jpg" alt="" />
+            <img src="../assets/INTERNATIONAL PHD/NguyenThiTy.jpg" alt="" />
           </div>
           <div class="name">Nguyen Thi Ty</div>
           <div class="vn">(Nguyễn Thị Ty)</div>
@@ -180,7 +185,7 @@
       <div class="bar"></div>
       <div class="grid">
         <div class="card">
-          <div class="avatar"><img src="/assets/PHD/xinh.jpg" alt="" /></div>
+          <div class="avatar"><img src="../assets/PHD/xinh.jpg" alt="" /></div>
           <div class="name">Le Thi Xinh</div>
           <div class="vn">(Lê Thị Xinh)</div>
         </div>
@@ -189,7 +194,7 @@
             class="avatar"
             href="member.html"
             title="Open profile: Dung Cam Quang"
-            ><img src="/assets/PHD/Quang.jpg" alt="Dung Cam Quang"
+            ><img src="../assets/PHD/Quang.jpg" alt="Dung Cam Quang"
           /></a>
           <div class="name">Dung Cam Quang</div>
           <div class="vn">(Dung Cẩm Quang)</div>
@@ -197,7 +202,7 @@
         <div class="card">
           <div class="avatar">
             <img
-              src="/assets/PHD/HuaPhuocTruong.png"
+              src="../assets/PHD/HuaPhuocTruong.png"
               alt=""
               style="object-position: top center"
             />
@@ -206,7 +211,7 @@
           <div class="vn">(Hứa Phước Trường)</div>
         </div>
         <div class="card">
-          <div class="avatar"><img src="/assets/PHD/NgocTTM.jpg" alt="" /></div>
+          <div class="avatar"><img src="../assets/PHD/NgocTTM.jpg" alt="" /></div>
           <div class="name">Truong Thi My Ngoc</div>
           <div class="vn">(Trương Thị Mỹ Ngọc)</div>
           <div class="role">PhD Student at University of Science, VNU-HCM</div>
@@ -214,7 +219,7 @@
         <div class="card">
           <div class="avatar">
             <img
-              src="/assets/PHD/NguyenNgocThai.jpg"
+              src="../assets/PHD/NguyenNgocThai.jpg"
               alt=""
               style="object-position: top center"
             />
@@ -224,14 +229,14 @@
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/PHD/NguyenThanhTung.jpg" alt="" />
+            <img src="../assets/PHD/NguyenThanhTung.jpg" alt="" />
           </div>
           <div class="name">Nguyen Thanh Tung</div>
           <div class="vn">(Nguyễn Thanh Tùng)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/PHD/BuiCongTuan.jpg" alt="" />
+            <img src="../assets/PHD/BuiCongTuan.jpg" alt="" />
           </div>
           <div class="name">Bui Cong Tuan</div>
           <div class="vn">(Bùi Công Tuấn)</div>
@@ -239,7 +244,7 @@
         <div class="card">
           <div class="avatar">
             <img
-              src="/assets/PHD/NguyenTranThi.jpeg"
+              src="../assets/PHD/NguyenTranThi.jpeg"
               alt=""
               style="object-position: top center"
             />
@@ -249,7 +254,7 @@
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/PHD/PhanTrungHieu.jpeg" alt="" />
+            <img src="../assets/PHD/PhanTrungHieu.jpeg" alt="" />
           </div>
           <div class="name">Phan Trung Hieu</div>
           <div class="vn">(Phan Trung Hiếu)</div>
@@ -263,21 +268,21 @@
       <div class="grid">
         <div class="card">
           <div class="avatar">
-            <img src="/assets/SENIOR RA/LuuChanHung.jpg" alt="" />
+            <img src="../assets/SENIOR RA/LuuChanHung.jpg" alt="" />
           </div>
           <div class="name">Luu Chan Hung</div>
           <div class="vn">(Lưu Chấn Hưng)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/SENIOR RA/HaiHa.jpg" alt="" />
+            <img src="../assets/SENIOR RA/HaiHa.jpg" alt="" />
           </div>
           <div class="name">Hai Ha</div>
           <div class="vn">(Hải Hà)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/PHD/LaNguyenGiaHy.jpg" alt="" />
+            <img src="../assets/PHD/LaNguyenGiaHy.jpg" alt="" />
           </div>
           <div class="name">La Nguyen Gia Hy</div>
           <div class="vn">(Lã Nguyễn Gia Hy)</div>
@@ -291,98 +296,98 @@
       <div class="grid">
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/NguyenSongThienLong.jpg" alt="" />
+            <img src="../assets/RA/NguyenSongThienLong.jpg" alt="" />
           </div>
           <div class="name">Nguyen Song Thien Long</div>
           <div class="vn">(Nguyễn Song Thiên Long)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/VoThiNhuQuynh.jpg" alt="" />
+            <img src="../assets/RA/VoThiNhuQuynh.jpg" alt="" />
           </div>
           <div class="name">Vo Thi Nhu Quynh</div>
           <div class="vn">(Võ Thị Như Quỳnh)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/NguyenHuuNamPhong.jpg" alt="" />
+            <img src="../assets/RA/NguyenHuuNamPhong.jpg" alt="" />
           </div>
           <div class="name">Nguyen Huu Nam Phong</div>
           <div class="vn">(Nguyễn Hữu Nam Phong)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/PhanThuyDung.JPG" alt="" />
+            <img src="../assets/RA/PhanThuyDung.JPG" alt="" />
           </div>
           <div class="name">Phan Thuy Dung</div>
           <div class="vn">(Phan Thùy Dung)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/PhamMinhTrung.jpg" alt="" />
+            <img src="../assets/RA/PhamMinhTrung.jpg" alt="" />
           </div>
           <div class="name">Pham Minh Trung</div>
           <div class="vn">(Phạm Minh Trung)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/PhamMinhHieu.jpg" alt="" />
+            <img src="../assets/RA/PhamMinhHieu.jpg" alt="" />
           </div>
           <div class="name">Pham Minh Hieu</div>
           <div class="vn">(Phạm Minh Hiếu)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/PhamLeNgocNgan.jpg" alt="" />
+            <img src="../assets/RA/PhamLeNgocNgan.jpg" alt="" />
           </div>
           <div class="name">Pham Le Ngoc Ngan</div>
           <div class="vn">(Phạm Lê Ngọc Ngân)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/PhanNgocLanChi.jpg" alt="" />
+            <img src="../assets/RA/PhanNgocLanChi.jpg" alt="" />
           </div>
           <div class="name">Phan Ngoc Lan Chi</div>
           <div class="vn">(Phan Ngọc Lan Chi)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/DinhTracDucAnh.jpg" alt="" />
+            <img src="../assets/RA/DinhTracDucAnh.jpg" alt="" />
           </div>
           <div class="name">Dinh Trac Duc Anh</div>
           <div class="vn">(Đinh Trác Đức Anh)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/TaTienTai.jpg" alt="" />
+            <img src="../assets/RA/TaTienTai.jpg" alt="" />
           </div>
           <div class="name">Ta Tien Tai</div>
           <div class="vn">(Tạ Tiến Tài)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/ChuMinhTam.JPG" alt="" />
+            <img src="../assets/RA/ChuMinhTam.JPG" alt="" />
           </div>
           <div class="name">Chu Minh Tam</div>
           <div class="vn">(Chu Minh Tâm)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/HuynhNga.jpg" alt="" />
+            <img src="../assets/RA/HuynhNga.jpg" alt="" />
           </div>
           <div class="name">Huynh Nga</div>
           <div class="vn">(Huỳnh Nga)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/LuMinhXuan.jpg" alt="" />
+            <img src="../assets/RA/LuMinhXuan.jpg" alt="" />
           </div>
           <div class="name">Lu Xuan Minh</div>
           <div class="vn">(Lữ Xuân Minh)</div>
         </div>
         <div class="card">
           <div class="avatar">
-            <img src="/assets/RA/BuiTranQuyen.jpg" alt="" />
+            <img src="../assets/RA/BuiTranQuyen.jpg" alt="" />
           </div>
           <div class="name">Bui Tran Quyen</div>
           <div class="vn">(Bùi Trần Quyền)</div>
@@ -396,7 +401,7 @@
       <div class="grid">
         <div class="card">
           <div class="avatar">
-            <img src="/assets/PhamCongThien.jpg" alt="" />
+            <img src="../assets/PhamCongThien.jpg" alt="" />
           </div>
           <div class="name">Dr. Pham Cong Thien</div>
           <div class="vn">(Phạm Công Thiện)</div>
@@ -439,7 +444,7 @@
             </a>
           </div>
           <div class="footer-logo">
-            <img src="/assets/URA_logo_1024.png" alt="URA Logo" />
+            <img src="../assets/URA_logo_1024.png" alt="URA Logo" />
           </div>
         </div>
       </div>
@@ -458,7 +463,11 @@
         <div class="bio-modal__body">
           <div class="bio-profile">
             <div class="bio-profile__image">
-              <img id="bioImage" src="/placeholder.svg" alt="Profile picture" />
+              <img
+                id="bioImage"
+                src="../assets/URA_logo_1024.png"
+                alt="Profile picture"
+              />
             </div>
 
             <div class="bio-profile__header">
@@ -497,10 +506,10 @@
       </div>
     </div>
 
-    <script src="/Navbar/navbar.js" defer></script>
-    <script src="/animations.js"></script>
+    <script src="../Navbar/navbar.js" defer></script>
+    <script src="../animations.js"></script>
     <!-- Add modal script -->
-    <script src="/bio-modal.js"></script>
-    <script src="/breadcrumbs.js"></script>
+    <script src="../bio-modal.js"></script>
+    <script src="../breadcrumbs.js"></script>
   </body>
 </html>

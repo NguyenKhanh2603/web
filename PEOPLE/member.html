@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="member.css" />
-    <link rel="stylesheet" href="/Navbar/navbar.css" />
+    <link rel="stylesheet" href="../Navbar/navbar.css" />
 
     <!-- FONT - STACK SANS TEXT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,23 +24,28 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicon_io/apple-touch-icon.png"
+      href="../assets/favicon_io/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon_io/favicon-32x32.png"
+      href="../assets/favicon_io/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon_io/favicon-16x16.png"
+      href="../assets/favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="manifest" href="../assets/favicon_io/site.webmanifest" />
   </head>
   <body data-nav-current="people">
+    <!--
+      Profile template for individual members.
+      Sidebar content (avatar/name/role) is editable per person; main sections anchor to the side menu for smooth navigation.
+      Uses shared Navbar/navbar.js and breadcrumbs.js from the project root along with assets stored under ../assets.
+    -->
     <div id="navbar-root"></div>
 
     <!-- =========================
@@ -51,7 +57,7 @@
       <aside class="member-sidebar fade-in">
         <div class="member-avatar" aria-hidden="true">
           <!-- TODO: Đổi ảnh profile cho từng người -->
-          <img src="/assets/PHD/Quang.jpg" alt="Profile photo of member" />
+          <img src="../assets/PHD/Quang.jpg" alt="Profile photo of member" />
         </div>
 
         <!-- TODO: Đổi tên và chức danh -->
@@ -233,7 +239,7 @@
             </a>
           </div>
           <div class="footer-logo">
-            <img src="/assets/URA_logo_1024.png" alt="URA Logo" />
+            <img src="../assets/URA_logo_1024.png" alt="URA Logo" />
           </div>
         </div>
       </div>
@@ -272,7 +278,7 @@
       window.addEventListener("scroll", onScroll);
       window.addEventListener("load", onScroll);
     </script>
-    <script src="/Navbar/navbar.js" defer></script>
-    <script src="/breadcrumbs.js" defer></script>
+    <script src="../Navbar/navbar.js" defer></script>
+    <script src="../breadcrumbs.js" defer></script>
   </body>
 </html>

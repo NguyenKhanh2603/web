@@ -6,7 +6,7 @@ const peopleData = {
     name: 'Quan Thanh Tho',
     nameVN: '(Quản Thành Thơ)',
     title: 'ASSOC. PROF.',
-    image: 'assets/Tho.jpg',
+    image: '../assets/Tho.jpg',
     about: {
       admission: '-',
       graduation: '-',
@@ -28,7 +28,7 @@ const peopleData = {
     name: 'Dung Cam Quang',
     nameVN: '(Dung Cẩm Quang)',
     title: 'PhD Student',
-    image: 'assets/Quang.jpg',
+    image: '../assets/PHD/Quang.jpg',
     about: {
       admission: '2025',
       graduation: '-',
